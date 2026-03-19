@@ -21,10 +21,10 @@ import matplotlib.pyplot as plt
 v = 20
 theta_degrees = 30
 theta = np.deg2rad(theta_degrees)
-k = 0.01
-m = 1
+k = 0.1
+m = 5
 g = 9.81
-dt = 0.01
+dt = 0.001
 
 vx = v * np.cos(theta)
 vy = v * np.sin(theta)
@@ -46,4 +46,10 @@ while y > 0:
     vy += (ay * dt)
     y += (vy * dt)
     y_values.append(y)
+
+plt.plot(x_values, y_values)
+plt.xlabel("Distance / m")
+plt.ylabel("Distance / m")
+plt.title("Plot of projectile motion with air resistance")
+plt.show()
     
