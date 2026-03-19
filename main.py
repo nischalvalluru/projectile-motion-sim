@@ -19,12 +19,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 v = 20
-theta_degrees = 30
+theta_degrees = 60
 theta = np.deg2rad(theta_degrees)
 k = 0.1
 m = 5
 g = 9.81
-dt = 0.001
+dt = 0.0001
 
 vx = v * np.cos(theta)
 vy = v * np.sin(theta)
