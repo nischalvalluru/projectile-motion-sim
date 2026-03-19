@@ -1,5 +1,5 @@
 # Projectile Motion Simulator
-A Python-based simulation (or whatever language you used) that calculates the trajectory of an object under the influence of gravity.
+A simulation that calculates, and plots the trajectory of an object under the influence of gravity.
 
 ## Features
 * Calculates displacement, velocity, and time of flight.
