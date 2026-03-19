@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Constants + initial conditions
+
 v = 20
 theta_degrees = 60
 theta = np.deg2rad(theta_degrees)
@@ -21,10 +23,12 @@ y = 0.00000001
 
 while y > 0:
     v_mag = np.sqrt((vx)**2 + (vy)**2)
+
     ax = (-k/m) * v_mag * vx
     vx += (ax * dt)
     x += (vx * dt)
     x_values.append(x)
+
     ay = -g + (-k/m) * v_mag * vy
     vy += (ay * dt)
     y += (vy * dt)
