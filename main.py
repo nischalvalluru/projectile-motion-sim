@@ -37,4 +37,3 @@ plt.xlabel("Distance / m")
 plt.ylabel("Distance / m")
 plt.title("Plot of projectile motion with air resistance")
 plt.show()
-    
