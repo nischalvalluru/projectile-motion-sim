@@ -13,7 +13,6 @@ Unlike the standard Euler method, this script employs the **Euler-Cromer** algor
 
 ## Features
 
-* **Numerical Stability:** Utilises a semi-implicit integration scheme for accurate trajectory mapping.
 * **Vectorised Calculations:** Leverages **NumPy** for efficient computation of velocity magnitudes and trigonometric transformations.
 * **Technical Visualisation:** Generates high-resolution plots using **Matplotlib**, including automated axis scaling and physical units.
 * **Configurable Parameters:** Initial conditions such as mass ($m$), drag coefficient ($k$), and launch velocity ($v_0$) are easily adjustable within the source code.
