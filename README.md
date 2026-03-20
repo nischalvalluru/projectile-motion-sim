@@ -1,18 +1,38 @@
 # Projectile Motion Simulator
-A simulation that calculates, and plots the trajectory of an object under the influence of gravity.
+A numerical physics engine designed to simulate and visualise the trajectory of a projectile subject to gravitational force and non-linear atmospheric drag. This simulator utilises the **Euler-Cromer** integration method to maintain superior stability and physical accuracy.
+
+## Physics Model
+
+The simulator models the motion of a point-mass by solving coupled ordinary differential equations (ODEs). It accounts for two primary physical influences:
+
+1. **Gravitational Acceleration:** A constant downward acceleration of $g = 9.81 \, \text{m/s}^2$.
+2. **Quadratic Drag:** Air resistance is modelled as being proportional to the square of the instantaneous velocity. This is the standard model for projectiles where the force of air resistance becomes significantly more dominant at higher speeds: $$\vec{a}_{drag} = -\frac{k}{m} |\vec{v}| \vec{v}$$
+
+### Numerical Integration
+Unlike the standard Euler method, this script employs the **Euler-Cromer** algorithm. By updating the velocity states ($v_{n+1}$) before calculating the position states ($x_{n+1}$), the simulation preserves the symplectic nature of the system, leading to more reliable energy conservation over the flight duration.
 
 ## Features
-* Calculates displacement, velocity, and time of flight.
-* Generates a visual plot of the trajectory using Matplotlib.
-* Allows user input for initial velocity and launch angle.
+
+* **Numerical Stability:** Utilises a semi-implicit integration scheme for accurate trajectory mapping.
+* **Vectorised Calculations:** Leverages **NumPy** for efficient computation of velocity magnitudes and trigonometric transformations.
+* **Technical Visualisation:** Generates high-resolution plots using **Matplotlib**, including automated axis scaling and physical units.
+* **Configurable Parameters:** Initial conditions such as mass ($m$), drag coefficient ($k$), and launch velocity ($v_0$) are easily adjustable within the source code.
+
 
 ## Prerequisites
-* Python 3.x
-* Matplotlib library (`pip install matplotlib`)
+
+Ensure you have Python 3.x installed along with the following dependencies:
+
+* **NumPy**
+* **Matplotlib**
+
+You can install these libraries using:
+
+pip install numpy matplotlib
 
 ## How to Run
 1. Clone the repository:
-   `git clone https://github.com/your-username/projectile-motion-sim.git`
+   `git clone https://github.com/nischalvalluru/projectile-motion-sim.git`
 2. Run the script:
    `python main.py`
 

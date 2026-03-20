@@ -12,7 +12,7 @@ g = 9.81
 dt = 0.001
 
 vx, vy = v0 * np.cos(theta_rad), v0 * np.sin(theta_rad)
-x, y = 0, 0.00000001
+x, y = 0, 1e-9
 
 x_vals = []
 y_vals = []
