@@ -5,11 +5,11 @@ A numerical physics engine designed to simulate and visualise the trajectory of 
 
 The simulator models the motion of a point-mass by solving coupled ordinary differential equations (ODEs). It accounts for two primary physical influences:
 
-1. **Gravitational Acceleration:** A constant downward acceleration of $g = 9.81 \, \text{m/s}^2$.
-2. **Quadratic Drag:** Air resistance is modelled as being proportional to the square of the instantaneous velocity. This is the standard model for projectiles where the force of air resistance becomes significantly more dominant at higher speeds: $$\vec{a}_{drag} = -\frac{k}{m} |\vec{v}| \vec{v}$$
+1. **Gravitational Acceleration:** A constant downward acceleration of $g = 9.81 \text{m/s}^2$.
+2. **Quadratic Drag:** Air resistance is modelled as being proportional to the square of the instantaneous velocity. This is the standard model for projectiles where the force of air resistance becomes significantly more dominant at higher speeds: $$\vec{a}_drag = -\frac{k}{m} v^2 \hat{v}$$
 
 ### Numerical Integration
-Unlike the standard Euler method, this script employs the **Euler-Cromer** algorithm. By updating the velocity states ($v_{n+1}$) before calculating the position states ($x_{n+1}$), the simulation preserves the symplectic nature of the system, leading to more reliable energy conservation over the flight duration.
+Unlike the standard Euler method, this script employs the **Euler-Cromer** algorithm. By updating the velocity states before calculating the position states, the simulation preserves the symplectic nature of the system, leading to more reliable energy conservation over the flight duration.
 
 ## Features
 
