@@ -4,12 +4,9 @@ import matplotlib.pyplot as plt
 # Constants + initial conditions
 
 v0 = 20
-theta_degrees = 60
+theta_degrees = 20
 theta_rad = np.deg2rad(theta_degrees)
-k = 0.1
-m = 10
-g = 9.81
-dt = 0.001
+k, m, g, dt = 1, 30, 9.81, 1e-9
 
 vx, vy = v0 * np.cos(theta_rad), v0 * np.sin(theta_rad)
 x, y = 0, 1e-9
